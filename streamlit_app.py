@@ -1,4 +1,3 @@
-pip install xgboost
 streamlit run streamlit_app.py
 
 
