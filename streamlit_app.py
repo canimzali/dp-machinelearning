@@ -6,6 +6,8 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import pickle
+from sklearn.ensemble import RandomForestRegressor
+
 
 # 1. Veri setini yükleme
 st.title('Sigorta Fiyatı Tahmin Uygulaması')
@@ -36,7 +38,7 @@ if uploaded_file is not None:
     
     # 4. Modeli eğitme
     st.write("Model eğitiliyor...")
-    model = X()
+    model=RandomForestRegressor()
     model.fit(X_train, y_train)
 
     st.write("Model başarıyla eğitildi!")
