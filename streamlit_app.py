@@ -45,26 +45,5 @@ if uploaded_file is not None:
         pickle.dump(model, file)
     st.write("Model kaydedildi.")
 
-    # 6. Tahmin yapma
-    st.write("Yeni müşteri bilgilerini girin ve tahmini sigorta fiyatını öğrenin.")
     
-    age = st.number_input('Yaş', min_value=18, max_value=100, value=30)
-    sex = st.selectbox('Cinsiyet', le_sex.classes_)
-    bmi = st.number_input('BMI (Vücut Kitle İndeksi)', min_value=10.0, max_value=50.0, value=25.0)
-    children = st.number_input('Çocuk Sayısı', min_value=0, max_value=10, value=0)
-    smoker = st.selectbox('Sigara Kullanımı', le_smoker.classes_)
-    region = st.selectbox('Bölge', le_region.classes_)
-
-    input_data = pd.DataFrame({
-        'age': [age],
-        'sex': [le_sex.transform([sex])[0]],
-        'bmi': [bmi],
-        'children': [children],
-        'smoker': [le_smoker.transform([smoker])[0]],
-        'region': [le_region.transform([region])[0]]
-    })
-
-    if st.button('Tahmin Et'):
-        prediction = model.predict(input_data)[0]
-        st.write(f"Tahmini Sigorta Fiyatınız: ${prediction:.2f}")
 
