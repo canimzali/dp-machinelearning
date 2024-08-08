@@ -13,9 +13,8 @@ from sklearn.ensemble import RandomForestRegressor
 st.title('Sigorta Fiyatı Tahmin Uygulaması')
 st.write("Sigorta veri setini yükleyin ve modeli eğitin.")
 
-uploaded_file = st.file_uploader("Bir CSV dosyası yükleyin", type=["csv"])
 
-if uploaded_file is not None:
+
     df = pd.read_csv('https://raw.githubusercontent.com/canimzali/dp-machinelearning/master/insurance.csv')
     st.write(df.head())
 
