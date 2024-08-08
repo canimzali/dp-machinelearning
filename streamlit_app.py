@@ -10,10 +10,4 @@ with st.expander('Data'):
   df = pd.read_csv('https://raw.githubusercontent.com/canimzali/dp-machinelearning/master/insurance.csv')
   df
 
-st.write('**X**')
-  X_raw = df.drop('charges', axis=1)
-  X_raw
 
-  st.write('**y**')
-  y_raw = df.charges
-  y_raw
