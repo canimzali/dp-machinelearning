@@ -10,7 +10,7 @@ from sklearn.ensemble import RandomForestRegressor
 
 
 # 1. Veri setini yükleme
-st.title('Sigorta Fiyatı Tahmin Uygulaması')
+st.title('🤖🤖 Sigorta Fiyatı Tahmin Uygulaması')
 st.write("Sigorta veri setini yükleyin ve modeli eğitin.")
 
 
